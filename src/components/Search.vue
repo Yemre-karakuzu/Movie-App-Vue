@@ -18,6 +18,7 @@
 
 <script>
 import { getResults } from "../services/SearchSevices";
+// import store from "../state/store";
 export default {
   data() {
     return {
@@ -39,10 +40,12 @@ export default {
           .then((res) => res.json())
           .then((res) => {
             this.data = res.results;
+            this.$store.dispatch("actionsMovie", this.data);
           });
       } catch (e) {
         console.log("e", e);
       }
+      console.log("getters=>", this.$store.getters.gettterMovie);
     },
   },
 };
