@@ -1,20 +1,39 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <div class="slide">
+      <SlideBar />
+    </div>
+    <div class="home">
+      <Home />
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import SlideBar from "./views/SlideBar";
+import Home from "./views/Home";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    SlideBar,
+    Home,
   },
 };
 </script>
 
 <style>
+#app {
+  display: flex;
+}
+.slide {
+  width: 20%;
+  height: 100vh;
+  background: yellow;
+}
+.home {
+  width: 80%;
+  height: 100vh;
+  background: violet;
+}
 </style>
