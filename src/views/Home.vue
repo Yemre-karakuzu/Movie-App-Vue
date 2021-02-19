@@ -1,10 +1,15 @@
 <template>
-  <div class="header">
-    <div class="header_title">
-      <Header />
+  <div class="home_conteiner">
+    <div class="header">
+      <div class="header_title">
+        <Header />
+      </div>
+      <div class="header_search">
+        <Search />
+      </div>
     </div>
-    <div class="header_search">
-      <Search />
+    <div class="home_wrapper">
+      <div>selam</div>
     </div>
   </div>
 </template>
@@ -27,5 +32,9 @@ export default {
   display: flex;
   justify-content: space-between;
   background: tomato;
+}
+.home_wrapper {
+  width: 100%;
+  height: 75%;
 }
 </style>

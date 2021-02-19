@@ -27,12 +27,12 @@ export default {
   display: flex;
 }
 .slide {
-  width: 20%;
+  width: 13%;
   height: 100vh;
   background: yellow;
 }
 .home {
-  width: 80%;
+  width: 87%;
   height: 100vh;
   background: violet;
 }
