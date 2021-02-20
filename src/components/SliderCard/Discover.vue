@@ -19,21 +19,27 @@ export default {
   data() {
     return {
       popular: "Popular",
+      isPopular: "false",
       topRated: "Top Rated",
+      isToRated: "false",
       upcoming: "Upcoming",
+      isUpComing: "false",
     };
   },
   methods: {
     movieGetters(keyword) {
-      //console.log("Discover");
       try {
+        if (keyword == "populer") {
+          this.isPopuler = "true";
+        } else if (keyword == "to_rated") {
+          this.isToRated = "true";
+        } else {
+          this.isUpComing = "true";
+        }
         getDiscover(keyword)
           .then((res) => res.json())
           .then((res) => {
-            //console.log("dicoverget");
-
             this.data = res.results;
-            console.log("discovergetdata", this.data);
             this.$store.dispatch("actionsMovie", this.data);
           });
       } catch (e) {
@@ -44,7 +50,7 @@ export default {
   },
   created() {
     window.scrollTo({ top: 0, behavior: "smooth" });
-    this.movieGetters();
+    this.movieGetters("popular");
   },
 };
 </script>
@@ -66,6 +72,9 @@ export default {
       margin-top: 5px;
       border-radius: 15px;
       border: 1px solid;
+      &[isPopuler="true"] {
+        background: cadetblue;
+      }
       &:hover {
         background: cornflowerblue;
       }

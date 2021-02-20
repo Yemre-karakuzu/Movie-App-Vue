@@ -2,9 +2,7 @@
   <div class="slide">
     <img class="img" src="https://via.placeholder.com/140x160" alt="" />
     <Discover></Discover>
-    <div class="genres">
-      <Genres></Genres>
-    </div>
+    <Genres></Genres>
   </div>
 </template>
 

@@ -31,7 +31,7 @@ export default {
   },
   created() {
     this.imagUrlUnit();
-    console.log("sss=>", this.imgUrl);
+    // console.log("sss=>", this.imgUrl);
   },
 };
 </script>
