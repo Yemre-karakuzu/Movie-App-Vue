@@ -1,10 +1,26 @@
 <template>
-  <div></div>
+  <div class="slide">
+    <img class="img" src="https://via.placeholder.com/140x160" alt="" />
+    <Discover></Discover>
+    <div class="genres">
+      <Genres></Genres>
+    </div>
+  </div>
 </template>
 
 <script>
-export default {};
+import Discover from "../components/SliderCard/Discover";
+import Genres from "../components/SliderCard/Genres";
+export default {
+  components: {
+    Discover,
+    Genres,
+  },
+};
 </script>
 
 <style>
+.img {
+  margin: 2rem;
+}
 </style>

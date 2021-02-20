@@ -1,8 +1,6 @@
 <template>
   <div id="app">
-    <div class="slide">
-      <SlideBar />
-    </div>
+    <SlideBar />
     <div class="home">
       <Home />
     </div>
@@ -30,6 +28,7 @@ export default {
 .slide {
   width: 20%;
   height: 100vh;
+  border: 0.1px solid;
 }
 .home {
   width: 80%;
