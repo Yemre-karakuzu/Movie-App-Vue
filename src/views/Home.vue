@@ -8,42 +8,27 @@
         <Search />
       </div>
     </div>
-    <div class="home_wrapper">
-      <div class="card-movie" v-for="movie in movies" :key="movie.id">
-        <div class="card-movie_image">
-          <img
-            src="https://image.tmdb.org/t/p/w500/"
-            +{{movie.poster_path}}
-            onerror="this.src='https://via.placeholder.com/92x138';"
-            alt=""
-          />
-        </div>
-        <div class="card-movie_details">
-          <div class="card-movie_title"></div>
-          <div class="card-movie_range"></div>
-        </div>
-      </div>
-    </div>
+    <Card v-bind:movies="getmovie"></Card>
   </div>
 </template>
 
 <script>
 import Header from "../components/Header";
 import Search from "../components/Search";
+import Card from "../components/MovieCard/Card";
 // import imgsize from "../assets/imgBase/ImgSize";
 export default {
   data() {
-    return {
-      movies: [],
-    };
+    return {};
   },
   components: {
     Header,
     Search,
+    Card,
   },
-  methods: {
+  computed: {
     getmovie() {
-      this.movies.push(this.$store.getters.gettterMovie);
+      return this.$store.getters.gettterMovie;
     },
   },
 };
@@ -55,10 +40,19 @@ export default {
   height: 15%;
   display: flex;
   justify-content: space-between;
-  background: tomato;
+  // background: tomato;
+}
+.home_conteiner {
+  height: 100vh;
+  background-color: #f5f5f5;
 }
 .home_wrapper {
-  width: 100%;
-  height: 75%;
+  overflow-y: scroll;
+  // width: 100vh;
+}
+.card {
+  display: grid;
+  grid-template-columns: 320px 320px 320px 320px;
+  margin: 20px 20px;
 }
 </style>

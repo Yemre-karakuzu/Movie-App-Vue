@@ -25,14 +25,15 @@ export default {
 <style>
 #app {
   display: flex;
+  /* height: 80vh; */
 }
 .slide {
-  width: 13%;
+  width: 20%;
   height: 100vh;
   background: yellow;
 }
 .home {
-  width: 87%;
+  width: 80%;
   height: 100vh;
   background: violet;
 }
