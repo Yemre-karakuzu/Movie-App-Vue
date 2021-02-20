@@ -42,11 +42,12 @@ export default {
   justify-content: space-between;
 }
 .home_conteiner {
+  // display: grid;
   height: 100vh;
+  overflow-y: scroll;
   background-color: #f5f5f5;
 }
 .home_wrapper {
-  overflow-y: scroll;
-  // width: 100vh;
+  width: 100vh;
 }
 </style>

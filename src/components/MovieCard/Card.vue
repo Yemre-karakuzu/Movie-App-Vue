@@ -44,19 +44,24 @@ export default {
 .card-movie_details {
   text-align: center;
   background: white;
+  background: rgba($color: #000000, $alpha: 0.5);
 }
 .card-movie {
   cursor: pointer;
   box-sizing: inherit;
-  margin-right: 20px;
+  margin-right: 45px;
+  margin-left: 20px;
+  box-shadow: 0rem 2rem 5rem rgba($color: #000000, $alpha: 0.5);
   border-radius: 1rem;
   &:hover {
     transform: translateY(-20px);
   }
 }
 .card {
+  display: grid;
+  grid-template-columns: 250px 250px 250px 250px;
+  grid-gap: 30px;
   margin: 40px 10px;
-  display: flex;
   height: 278px;
   width: 185px;
 }

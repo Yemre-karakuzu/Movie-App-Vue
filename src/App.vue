@@ -23,7 +23,6 @@ export default {
 <style>
 #app {
   display: flex;
-  /* height: 80vh; */
 }
 .slide {
   width: 20%;
