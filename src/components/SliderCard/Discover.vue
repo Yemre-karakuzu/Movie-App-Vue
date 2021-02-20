@@ -57,26 +57,28 @@ export default {
 
 <style lang="scss">
 .discover {
-  margin-top: 2rem 6rem;
-
+  //margin: 2rem 6rem;
+  margin-top: 5rem;
   .discovertitle {
     text-align: center;
     font-size: 1.2rem;
   }
   .btn-conteiner {
+    width: 50%;
+    margin-left: 0.9rem;
     .btn {
       padding: 0px 5px;
       display: grid;
       cursor: pointer;
-      text-align: center;
+      text-align: left;
       margin-top: 5px;
       border-radius: 15px;
-      border: 1px solid;
       &[isPopuler="true"] {
         background: cadetblue;
       }
       &:hover {
         background: cornflowerblue;
+        border: 1px solid;
       }
     }
   }

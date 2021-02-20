@@ -20,17 +20,18 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 #app {
   display: flex;
 }
 .slide {
-  width: 20%;
+  width: 15%;
   height: 100vh;
   border: 0.1px solid;
+  background: rgba($color: #e8e9e9, $alpha: 0.5);
 }
 .home {
-  width: 80%;
+  width: 85%;
   height: 100vh;
   background: violet;
 }

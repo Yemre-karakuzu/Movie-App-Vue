@@ -26,14 +26,6 @@ export default {
     CardTitle,
     CardRange,
   },
-  watch: {
-    movies() {
-      console.log("img=>", this.$store.getters.gettterMovie);
-    },
-  },
-  created() {
-    console.log("selam");
-  },
 };
 </script>
 

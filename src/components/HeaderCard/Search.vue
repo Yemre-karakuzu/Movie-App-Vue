@@ -44,7 +44,6 @@ export default {
       } catch (e) {
         console.log("e", e);
       }
-      console.log("getters=>", this.$store.getters.gettterMovie);
     },
   },
 };
