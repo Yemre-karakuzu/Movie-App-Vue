@@ -1,9 +1,13 @@
 <template>
-  <div></div>
+  <div class="card-movie_range">{{ range }}</div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    range: Number,
+  },
+};
 </script>
 
 <style>

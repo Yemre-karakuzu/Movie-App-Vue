@@ -21,7 +21,7 @@ export default {
   },
   methods: {
     imagUrlUnit() {
-      this.imgFolder = "https://image.tmdb.org/t/p/w500/" + this.imgFolder;
+      this.imgUrl = "https://image.tmdb.org/t/p/w500" + this.imgFolder;
     },
   },
   watch: {

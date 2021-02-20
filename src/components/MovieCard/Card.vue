@@ -3,10 +3,8 @@
     <div class="card-movie" v-for="movie in movies" :key="movie.id">
       <CardImage v-bind:imgFolder="movie.poster_path"></CardImage>
       <div class="card-movie_details">
-        <!-- <div class="card-movie_title">{{ movie.original_title }}</div>
-        <div class="card-movie_range">{{ movie.vote_average }}</div> -->
         <CardTitle v-bind:title="movie.original_title"></CardTitle>
-        <CardRange></CardRange>
+        <CardRange v-bind:range="movie.vote_average"></CardRange>
       </div>
     </div>
   </div>
@@ -14,8 +12,8 @@
 
 <script>
 import CardImage from "./CardImage";
-import CardTitle from "./CardImage";
-import CardRange from "./CardImage";
+import CardTitle from "./CardTitle";
+import CardRange from "./CardRange";
 export default {
   data() {
     return {};

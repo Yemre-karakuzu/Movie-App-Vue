@@ -18,7 +18,6 @@
 
 <script>
 import { getResults } from "../services/SearchSevices";
-// import store from "../state/store";
 export default {
   data() {
     return {
