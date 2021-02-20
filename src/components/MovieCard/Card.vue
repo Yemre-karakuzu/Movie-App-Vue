@@ -41,4 +41,18 @@ export default {
 .card-movie_image {
   display: flex;
 }
+.card-movie_details {
+  text-align: center;
+  background: white;
+}
+.card-movie {
+  margin-right: 20px;
+  border-radius: 1rem;
+}
+.card {
+  margin: 40px 10px;
+  display: flex;
+  height: 278px;
+  width: 185px;
+}
 </style>

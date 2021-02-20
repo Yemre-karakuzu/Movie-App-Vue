@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import { getResults } from "../services/SearchSevices";
+import { getResults } from "../../services/Sevices";
 export default {
   data() {
     return {

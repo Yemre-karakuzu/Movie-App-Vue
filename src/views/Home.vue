@@ -2,7 +2,7 @@
   <div class="home_conteiner">
     <div class="header">
       <div class="header_title">
-        <Header />
+        <Header></Header>
       </div>
       <div class="header_search">
         <Search />
@@ -13,8 +13,8 @@
 </template>
 
 <script>
-import Header from "../components/Header";
-import Search from "../components/Search";
+import Header from "../components/HeaderCard/Header";
+import Search from "../components/HeaderCard/Search";
 import Card from "../components/MovieCard/Card";
 // import imgsize from "../assets/imgBase/ImgSize";
 export default {
@@ -40,7 +40,6 @@ export default {
   height: 15%;
   display: flex;
   justify-content: space-between;
-  // background: tomato;
 }
 .home_conteiner {
   height: 100vh;
@@ -49,10 +48,5 @@ export default {
 .home_wrapper {
   overflow-y: scroll;
   // width: 100vh;
-}
-.card {
-  display: grid;
-  grid-template-columns: 320px 320px 320px 320px;
-  margin: 20px 20px;
 }
 </style>

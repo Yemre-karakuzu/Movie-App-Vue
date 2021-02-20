@@ -3,7 +3,7 @@
     <img
       class="card-movie_image_img"
       :src="imgUrl"
-      onerror="this.src='https://via.placeholder.com/300x400';"
+      onerror="this.src='https://via.placeholder.com/185x278';"
       alt=""
     />
   </div>
@@ -21,20 +21,20 @@ export default {
   },
   methods: {
     imagUrlUnit() {
-      this.imgUrl = "https://image.tmdb.org/t/p/w500" + this.imgFolder;
+      this.imgUrl = "https://image.tmdb.org/t/p/w185" + this.imgFolder;
     },
   },
   watch: {
     imgFolder() {
-      console.log("sss=>", this.imgUrl);
+      console.log("sss=>", this.imgFolder);
     },
+  },
+  created() {
+    this.imagUrlUnit();
+    console.log("sss=>", this.imgUrl);
   },
 };
 </script>
 
 <style>
-.card-movie_image_img {
-  margin-top: 20px;
-  margin-left: 30px;
-}
 </style>

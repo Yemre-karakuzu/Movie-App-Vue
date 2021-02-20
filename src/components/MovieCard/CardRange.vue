@@ -1,5 +1,7 @@
 <template>
-  <div class="card-movie_range">{{ range }}</div>
+  <div class="card-movie_range">
+    <button class="detail">{{ range }}</button>
+  </div>
 </template>
 
 <script>
@@ -11,4 +13,7 @@ export default {
 </script>
 
 <style>
+.detail {
+  background: blueviolet;
+}
 </style>

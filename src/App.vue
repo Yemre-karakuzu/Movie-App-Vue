@@ -30,7 +30,6 @@ export default {
 .slide {
   width: 20%;
   height: 100vh;
-  background: yellow;
 }
 .home {
   width: 80%;

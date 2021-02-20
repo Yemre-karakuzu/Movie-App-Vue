@@ -10,6 +10,5 @@ export default {};
 .title {
   width: 600px;
   height: 140px;
-  background: red;
 }
 </style>
