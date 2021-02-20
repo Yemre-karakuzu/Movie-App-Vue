@@ -3,7 +3,7 @@
     <div class="card-movie" v-for="movie in movies" :key="movie.id">
       <CardImage v-bind:imgFolder="movie.poster_path"></CardImage>
       <div class="card-movie_details">
-        <CardTitle v-bind:title="movie.original_title"></CardTitle>
+        <CardTitle v-bind:title="movie.title"></CardTitle>
         <CardRange v-bind:range="movie.vote_average"></CardRange>
       </div>
     </div>
