@@ -37,7 +37,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 .card-movie_image {
   display: flex;
 }
@@ -46,8 +46,13 @@ export default {
   background: white;
 }
 .card-movie {
+  cursor: pointer;
+  box-sizing: inherit;
   margin-right: 20px;
   border-radius: 1rem;
+  &:hover {
+    transform: translateY(-20px);
+  }
 }
 .card {
   margin: 40px 10px;

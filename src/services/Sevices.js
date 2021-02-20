@@ -5,9 +5,8 @@ export async function getResults(keyword) {
     return response;
 }
 
-export async function getDiscover() {
-    const response = await fetch(`${base_url}/discover/movie?api_key=${api_key}&language=en-US`);
+export async function getDiscover(keyword) {
+    const response = await fetch(`${base_url}/movie/${keyword}?api_key=${api_key}&language=en-US&page=1`);
     console.log("funcDiscover=>", response)
-        //https://api.themoviedb.org/3/discover/movie?api_key=a956fd1eaf496fb9a4ff63da9852114a&language=en-US&page=1
     return response;
 }

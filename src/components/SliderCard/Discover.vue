@@ -2,9 +2,13 @@
   <div class="discover">
     <div class="discovertitle">Discover</div>
     <div class="btn-conteiner">
-      <div class="btn">{{ this.popular }}</div>
-      <div class="btn">{{ this.topRated }}</div>
-      <div class="btn">{{ this.upcoming }}</div>
+      <div @click="movieGetters('popular')" class="btn">{{ this.popular }}</div>
+      <div @click="movieGetters('top_rated')" class="btn">
+        {{ this.topRated }}
+      </div>
+      <div @click="movieGetters('upcoming')" class="btn">
+        {{ this.upcoming }}
+      </div>
     </div>
   </div>
 </template>
@@ -16,14 +20,14 @@ export default {
     return {
       popular: "Popular",
       topRated: "Top Rated",
-      upcoming: "UpComing",
+      upcoming: "Upcoming",
     };
   },
   methods: {
-    movieGetters() {
+    movieGetters(keyword) {
       //console.log("Discover");
       try {
-        getDiscover()
+        getDiscover(keyword)
           .then((res) => res.json())
           .then((res) => {
             //console.log("dicoverget");
