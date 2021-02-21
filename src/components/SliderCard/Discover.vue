@@ -40,6 +40,7 @@ export default {
           .then((res) => res.json())
           .then((res) => {
             this.data = res.results;
+            console.log("datass=>", this.data);
             this.$store.dispatch("actionsMovie", this.data);
           });
       } catch (e) {

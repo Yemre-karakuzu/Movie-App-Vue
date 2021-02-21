@@ -15,7 +15,7 @@ import { getGenre } from "../services/Sevices";
 export default {
   data() {
     return {
-      isShow: false,
+      isShow: true,
       state: false,
     };
   },

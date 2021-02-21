@@ -2,19 +2,35 @@
   <div class="genre">
     <div class="genretitle">Genres</div>
     <div class="btn-conteiner" v-for="list in genreList" :key="list.id">
-      <div class="btn">
-        {{ list.name }}
-      </div>
+      <div class="btn">{{ list.name }}/{{ list.id }}</div>
     </div>
   </div>
 </template>
 
 <script>
+import { getGenreResult } from "../../services/Sevices";
 export default {
   props: {
     genreList: [],
   },
+  methods: {
+    movieGetters() {
+      try {
+        getGenreResult()
+          .then((res) => res.json())
+          .then((res) => {
+            this.data = res.results;
+            console.log("datassssssssssssssss=>", this.data);
+            this.$store.dispatch("actionsMovie", this.data);
+          });
+      } catch (e) {
+        console.log("e", e);
+      }
+      console.log("getters=>", this.$store.getters.gettterMovie);
+    },
+  },
   created() {
+    this.movieGetters();
     window.scrollTo({ top: 0, behavior: "smooth" });
   },
 };

@@ -15,6 +15,11 @@ export async function getGenre() {
     console.log("funcGenre=>", response)
     return response;
 }
+export async function getGenreResult() {
+    const response = await fetch(`https://api.themoviedb.org/3/keyword/28/movies?api_key=a956fd1eaf496fb9a4ff63da9852114a&language=en-US&include_adult=false`);
+    console.log("genrefuncResult=>>>", response)
+    return response;
+}
 
 
 // https://api.themoviedb.org/3/genre/movie/list?api_key=a956fd1eaf496fb9a4ff63da9852114a&language=en-US
