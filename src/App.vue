@@ -26,7 +26,7 @@ export default {
   font-family: candara;
 }
 .home {
-  width: 85%;
+  width: 87%;
   height: 100vh;
   background: violet;
 }

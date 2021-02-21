@@ -1,6 +1,9 @@
 <template>
   <div class="header_title">
-    <div class="title">{{ this.title }}</div>
+    <div class="title">
+      {{ this.title.toUpperCase() }}
+      <div class="titledetail">MOVIES</div>
+    </div>
   </div>
 </template>
 
@@ -21,6 +24,7 @@ export default {
       this.title = this.$store.getters.getterHeaderTitle;
     },
   },
+
   created() {
     this.getTitle();
   },
@@ -28,8 +32,17 @@ export default {
 </script>
 
 <style lang="scss">
-.title {
-  width: 600px;
-  height: 140px;
+.header_title {
+  margin: 20px 20px;
+  .title {
+    font-size: 24px;
+    font-weight: 300;
+    width: 600px;
+    height: 140px;
+    .titledetail {
+      font-weight: bold;
+      font-size: 12px;
+    }
+  }
 }
 </style>

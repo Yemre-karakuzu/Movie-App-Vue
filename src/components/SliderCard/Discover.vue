@@ -2,12 +2,14 @@
   <div class="discover">
     <div class="discovertitle">Discover</div>
     <div class="btn-conteiner">
-      <div @click="movieGetters('popular')" class="btn">{{ this.popular }}</div>
+      <div @click="movieGetters('popular')" class="btn">
+        <i class="icon fa fa-heart"></i>{{ this.popular }}
+      </div>
       <div @click="movieGetters('top_rated')" class="btn">
-        {{ this.topRated }}
+        <i class="icon fa fa-poll"></i>{{ this.topRated }}
       </div>
       <div @click="movieGetters('upcoming')" class="btn">
-        {{ this.upcoming }}
+        <i class="fad fa-archive"></i>{{ this.upcoming }}
       </div>
     </div>
   </div>
@@ -29,13 +31,16 @@ export default {
   methods: {
     movieGetters(keyword) {
       try {
-        if (keyword == "populer") {
+        if (keyword == "popular") {
           this.isPopuler = "true";
+          console.log("populer");
           this.$store.dispatch("actionsHeaderTitle", this.popular);
-        } else if (keyword == "to_rated") {
+        } else if (keyword == "top_rated") {
+          console.log("toprated");
           this.isToRated = "true";
           this.$store.dispatch("actionsHeaderTitle", this.topRated);
         } else {
+          console.log("upcoming");
           this.isUpComing = "true";
           this.$store.dispatch("actionsHeaderTitle", this.upcoming);
         }
@@ -62,7 +67,9 @@ export default {
   //margin: 2rem 6rem;
   margin-top: 5rem;
   .discovertitle {
-    text-align: center;
+    text-align: left;
+    padding: 0px 10px;
+    font-weight: bold;
     font-size: 1.2rem;
   }
   .btn-conteiner {
@@ -71,13 +78,20 @@ export default {
     .btn {
       padding: 0px 5px;
       display: grid;
+      display: flex;
       cursor: pointer;
       text-align: left;
       margin-top: 5px;
       border-radius: 15px;
       &:hover {
+        transform: translateX(15px);
         background: cornflowerblue;
         border: 1px solid;
+      }
+      .icon {
+        padding: 5px 3px;
+        color: grey;
+        font-size: 10px;
       }
     }
   }

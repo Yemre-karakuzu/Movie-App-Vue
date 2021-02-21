@@ -41,7 +41,7 @@ export default {
 
 <style lang="scss">
 .slide {
-  width: 15%;
+  width: 13%;
   height: 100vh;
   border: 0.1px solid;
   background: rgba($color: #e8e9e9, $alpha: 0.5);

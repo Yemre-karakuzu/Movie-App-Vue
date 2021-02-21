@@ -9,7 +9,6 @@
       </div>
     </div>
     <Card v-bind:movies="getmovie"></Card>
-    <div>Selam</div>
   </div>
 </template>
 
