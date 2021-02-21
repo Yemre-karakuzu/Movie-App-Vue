@@ -1,19 +1,16 @@
 <template>
-  <div class="card-movie_range">
-    <button class="detail">{{ range }}</button>
+  <div class="movie_range">
+    <div class="movie_range-detail">{{ Range }}</div>
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    range: Number,
+    Range: Number,
   },
 };
 </script>
 
 <style>
-.detail {
-  background: blueviolet;
-}
 </style>

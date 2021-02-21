@@ -33,22 +33,6 @@ export default {
 </script>
 
 <style lang="scss">
-.card-movie_image {
-  position: relative;
-  display: flex;
-  .movie_range {
-    border-radius: 64%;
-    width: 30px;
-    padding-top: 4px;
-    text-align: center;
-    position: absolute;
-    background: black;
-    color: white;
-    top: 8px;
-    left: 16px;
-    height: 30px;
-  }
-}
 .card-movie_details {
   text-align: center;
   background: white;
