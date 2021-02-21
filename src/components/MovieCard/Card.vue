@@ -3,8 +3,8 @@
     <div class="card-movie" v-for="movie in movies" :key="movie.id">
       <CardImage v-bind:imgFolder="movie.poster_path"></CardImage>
       <div class="card-movie_details">
-        <CardTitle v-bind:title="movie.title"></CardTitle>
-        <CardRange v-bind:range="movie.vote_average"></CardRange>
+        <!-- <CardTitle v-bind:title="movie.title"></CardTitle> -->
+        <!-- <CardRange v-bind:range="movie.vote_average"></CardRange> -->
       </div>
     </div>
   </div>
@@ -12,8 +12,8 @@
 
 <script>
 import CardImage from "./CardImage";
-import CardTitle from "./CardTitle";
-import CardRange from "./CardRange";
+// import CardTitle from "./CardTitle";
+// import CardRange from "./CardRange";
 export default {
   data() {
     return {};
@@ -23,8 +23,8 @@ export default {
   },
   components: {
     CardImage,
-    CardTitle,
-    CardRange,
+    // CardTitle,
+    // CardRange,
   },
 };
 </script>
@@ -44,9 +44,9 @@ export default {
   margin-right: 45px;
   margin-left: 20px;
   box-shadow: 0rem 2rem 5rem rgba($color: #000000, $alpha: 0.5);
-  border-radius: 1rem;
+  border-radius: 3rem;
   &:hover {
-    transform: translateY(-20px);
+    transform: translateY(-15px);
   }
 }
 .card {

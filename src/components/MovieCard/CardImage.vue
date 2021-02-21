@@ -21,7 +21,7 @@ export default {
   },
   methods: {
     imagUrlUnit() {
-      this.imgUrl = "https://image.tmdb.org/t/p/w185" + this.imgFolder;
+      this.imgUrl = "https://image.tmdb.org/t/p/w342" + this.imgFolder;
     },
   },
   watch: {

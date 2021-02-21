@@ -6,8 +6,9 @@
           v-model="search"
           type="text"
           placeholder="Search"
-          @click="state = 'opan'"
+          @mouseover="state = 'opan'"
           @blur="state = 'close'"
+          @mouseleave="state = 'close'"
           @keyup.enter="searchDatas"
         />
         <i class="fa fa-search" aria-hidden="true"></i>

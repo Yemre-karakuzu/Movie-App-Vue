@@ -23,12 +23,7 @@ export default {
 <style lang="scss">
 #app {
   display: flex;
-}
-.slide {
-  width: 15%;
-  height: 100vh;
-  border: 0.1px solid;
-  background: rgba($color: #e8e9e9, $alpha: 0.5);
+  font-family: candara;
 }
 .home {
   width: 85%;
