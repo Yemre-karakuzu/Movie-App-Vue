@@ -1,10 +1,7 @@
 <template>
-  <div class="slide" data-state="state">
-    <i class="fa fa-search" aria-hidden="true" @click="isShowMethods"></i>
-    <div class="show-hide" v-show="isShow">
-      <Discover></Discover>
-      <Genres v-bind:genreList="getGenreList"></Genres>
-    </div>
+  <div class="slide">
+    <Discover></Discover>
+    <Genres v-bind:genreList="getGenreList"></Genres>
   </div>
 </template>
 
@@ -13,27 +10,17 @@ import Discover from "../components/SliderCard/Discover";
 import Genres from "../components/SliderCard/Genres";
 import { getGenre } from "../services/Sevices";
 export default {
-  data() {
-    return {
-      isShow: true,
-      state: false,
-    };
-  },
   components: {
     Discover,
     Genres,
   },
   methods: {
-    isShowMethods() {
-      this.isShow = !this.isShow;
-    },
     movieGetters() {
       try {
         getGenre()
           .then((res) => res.json())
           .then((res) => {
             this.data = res.genres;
-            console.log("ddd", this.data);
             this.$store.dispatch("actionsGenreList", this.data);
           });
       } catch (e) {

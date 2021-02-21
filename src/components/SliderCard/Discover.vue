@@ -31,22 +31,23 @@ export default {
       try {
         if (keyword == "populer") {
           this.isPopuler = "true";
+          this.$store.dispatch("actionsHeaderTitle", this.popular);
         } else if (keyword == "to_rated") {
           this.isToRated = "true";
+          this.$store.dispatch("actionsHeaderTitle", this.topRated);
         } else {
           this.isUpComing = "true";
+          this.$store.dispatch("actionsHeaderTitle", this.upcoming);
         }
         getDiscover(keyword)
           .then((res) => res.json())
           .then((res) => {
             this.data = res.results;
-            console.log("datass=>", this.data);
             this.$store.dispatch("actionsMovie", this.data);
           });
       } catch (e) {
         console.log("e", e);
       }
-      console.log("getters=>", this.$store.getters.gettterMovie);
     },
   },
   created() {
@@ -74,9 +75,6 @@ export default {
       text-align: left;
       margin-top: 5px;
       border-radius: 15px;
-      &[isPopuler="true"] {
-        background: cadetblue;
-      }
       &:hover {
         background: cornflowerblue;
         border: 1px solid;

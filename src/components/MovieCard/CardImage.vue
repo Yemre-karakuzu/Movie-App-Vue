@@ -24,14 +24,8 @@ export default {
       this.imgUrl = "https://image.tmdb.org/t/p/w342" + this.imgFolder;
     },
   },
-  watch: {
-    imgFolder() {
-      console.log("sss=>", this.imgFolder);
-    },
-  },
   created() {
     this.imagUrlUnit();
-    // console.log("sss=>", this.imgUrl);
   },
 };
 </script>

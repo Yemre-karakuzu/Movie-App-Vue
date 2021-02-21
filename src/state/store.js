@@ -5,7 +5,8 @@ Vue.use(Vuex);
 export const store = new Vuex.Store({
     state: {
         movie: [],
-        genreList: []
+        genreList: [],
+        headerTitle: []
     },
     getters: {
         gettterMovie(state) {
@@ -13,6 +14,9 @@ export const store = new Vuex.Store({
         },
         gettterGenreList(state) {
             return state.genreList;
+        },
+        getterHeaderTitle(state) {
+            return state.headerTitle;
         }
     },
     mutations: {
@@ -21,6 +25,9 @@ export const store = new Vuex.Store({
         },
         mutationGenreList(state, data) {
             state.genreList = data;
+        },
+        mutationHeaderTitle(state, data) {
+            state.headerTitle = data;
         }
     },
     actions: {
@@ -29,6 +36,9 @@ export const store = new Vuex.Store({
         },
         actionsGenreList({ commit }, data) {
             commit("mutationGenreList", data)
+        },
+        actionsHeaderTitle({ commit }, data) {
+            commit("mutationHeaderTitle", data)
         }
     }
 })

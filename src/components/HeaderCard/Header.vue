@@ -1,9 +1,30 @@
 <template>
-  <div class="title"></div>
+  <div class="header_title">
+    <div class="title">{{ this.title }}</div>
+  </div>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      title: "",
+    };
+  },
+  methods: {
+    getTitle() {
+      this.title = this.$store.getters.getterHeaderTitle;
+    },
+  },
+  watch: {
+    title() {
+      this.title = this.$store.getters.getterHeaderTitle;
+    },
+  },
+  created() {
+    this.getTitle();
+  },
+};
 </script>
 
 <style lang="scss">
