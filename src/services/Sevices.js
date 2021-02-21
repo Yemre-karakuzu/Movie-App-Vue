@@ -13,7 +13,7 @@ export async function getGenre() {
     const response = await fetch(`${base_url}/genre/movie/list?api_key=${api_key}&language=en-US`);
     return response;
 }
-export async function getGenreResult() {
-    const response = await fetch(`https://api.themoviedb.org/3/keyword/28/movies?api_key=a956fd1eaf496fb9a4ff63da9852114a&language=en-US&include_adult=false`);
+export async function getMoviDetail(movie_id) {
+    const response = await fetch(`${base_url}/movie/${movie_id}?api_key=${api_key}&language=en-US`);
     return response;
 }
