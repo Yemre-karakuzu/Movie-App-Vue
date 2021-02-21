@@ -1,7 +1,10 @@
 <template>
   <div class="card">
     <div class="card-movie" v-for="movie in movies" :key="movie.id">
-      <CardImage v-bind:imgFolder="movie.poster_path"></CardImage>
+      <CardImage
+        v-bind:range="movie.vote_average"
+        v-bind:imgFolder="movie.poster_path"
+      ></CardImage>
       <div class="card-movie_details">
         <!-- <CardTitle v-bind:title="movie.title"></CardTitle> -->
         <!-- <CardRange v-bind:range="movie.vote_average"></CardRange> -->
@@ -31,7 +34,20 @@ export default {
 
 <style lang="scss">
 .card-movie_image {
+  position: relative;
   display: flex;
+  .movie_range {
+    border-radius: 64%;
+    width: 30px;
+    padding-top: 4px;
+    text-align: center;
+    position: absolute;
+    background: black;
+    color: white;
+    top: 8px;
+    left: 16px;
+    height: 30px;
+  }
 }
 .card-movie_details {
   text-align: center;

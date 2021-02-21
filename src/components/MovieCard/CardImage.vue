@@ -6,6 +6,7 @@
       onerror="this.src='https://via.placeholder.com/185x278';"
       alt=""
     />
+    <div class="movie_range">{{ range }}</div>
   </div>
 </template>
 
@@ -17,6 +18,7 @@ export default {
     };
   },
   props: {
+    range: Number,
     imgFolder: String,
   },
   methods: {
