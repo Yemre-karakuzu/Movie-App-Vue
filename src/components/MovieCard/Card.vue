@@ -15,7 +15,6 @@
 
 <script>
 import CardImage from "./CardImage";
-import { getMoviDetail } from "../../services/Sevices";
 // import CardTitle from "./CardTitle";
 // import CardRange from "./CardRange";
 export default {
@@ -29,24 +28,6 @@ export default {
     CardImage,
     // CardTitle,
     // CardRange,
-  },
-  methods: {
-    movieGetters() {
-      try {
-        getMoviDetail()
-          .then((res) => res.json())
-          .then((res) => {
-            this.data = res;
-            console.log("details=>", this.data);
-            // this.$store.dispatch("actionsMovie", this.data);
-          });
-      } catch (e) {
-        console.log("e", e);
-      }
-    },
-  },
-  created() {
-    this.movieGetters();
   },
 };
 </script>

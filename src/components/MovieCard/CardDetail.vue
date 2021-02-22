@@ -23,7 +23,34 @@
 </template>
 
 <script>
-export default {};
+import { getMoviDetail } from "../../services/Sevices";
+
+export default {
+  data() {
+    return {
+      movieDetails: [],
+    };
+  },
+  methods: {
+    movieGetters() {
+      try {
+        getMoviDetail()
+          .then((res) => res.json())
+          .then((res) => {
+            this.data = res;
+            this.movieDetails = this.data;
+            console.log("details=>", this.movieDetails);
+            // this.$store.dispatch("actionsMovie", this.data);
+          });
+      } catch (e) {
+        console.log("e", e);
+      }
+    },
+  },
+  created() {
+    this.movieGetters();
+  },
+};
 </script>
 
 <style>
