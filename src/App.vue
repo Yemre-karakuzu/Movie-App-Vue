@@ -2,7 +2,9 @@
   <div id="app">
     <SlideBar />
     <div class="home">
-      <Home />
+      <router-view>
+        <Home />
+      </router-view>
     </div>
   </div>
 </template>
@@ -28,6 +30,5 @@ export default {
 .home {
   width: 87%;
   height: 100vh;
-  background: violet;
 }
 </style>

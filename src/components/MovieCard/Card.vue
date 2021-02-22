@@ -4,6 +4,7 @@
       <CardImage
         v-bind:range="movie.vote_average"
         v-bind:imgFolder="movie.poster_path"
+        v-bind:movieId="movie.id"
       ></CardImage>
       <div class="card-movie_details">
         <!-- <CardTitle v-bind:title="movie.title"></CardTitle> -->
@@ -44,8 +45,11 @@ export default {
   margin-right: 45px;
   margin-left: 20px;
   box-shadow: 0rem 2rem 5rem rgba($color: #000000, $alpha: 0.5);
-  border-radius: 3rem;
+  border-radius: 2rem;
+
   &:hover {
+    border-radius: 10rem;
+    z-index: 100;
     transform: translateY(-15px);
   }
 }
@@ -54,7 +58,7 @@ export default {
   grid-template-columns: 250px 250px 250px 250px;
   grid-gap: 30px;
   margin: 40px 10px;
-  height: 278px;
-  width: 185px;
+  height: 500px;
+  width: 500px;
 }
 </style>

@@ -1,20 +1,11 @@
 <template>
   <div class="home_conteiner">
-    <div class="header">
-      <div class="header_title">
-        <Header></Header>
-      </div>
-      <div class="header_search">
-        <Search />
-      </div>
-    </div>
+    <HeaderHome />
     <Card v-bind:movies="getmovie"></Card>
   </div>
 </template>
-
 <script>
-import Header from "../components/HeaderCard/Header";
-import Search from "../components/HeaderCard/Search";
+import HeaderHome from "../components/HeaderCard/HeaderHome";
 import Card from "../components/MovieCard/Card";
 // import imgsize from "../assets/imgBase/ImgSize";
 export default {
@@ -22,8 +13,7 @@ export default {
     return {};
   },
   components: {
-    Header,
-    Search,
+    HeaderHome,
     Card,
   },
   computed: {
@@ -35,12 +25,6 @@ export default {
 </script>
 
 <style lang="scss">
-.header {
-  width: 100%;
-  height: 15%;
-  display: flex;
-  justify-content: space-between;
-}
 .home_conteiner {
   // display: grid;
   height: 100vh;

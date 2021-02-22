@@ -1,9 +1,10 @@
 <template>
   <div class="card-movie_image">
     <img
+      @click="cardDetail"
       class="card-movie_image_img"
       :src="imgUrl"
-      onerror="this.src='https://via.placeholder.com/185x278';"
+      onerror="this.src='https://via.placeholder.com/342x513';"
       alt=""
     />
     <CardRange v-bind:Range="range"></CardRange>
@@ -24,10 +25,15 @@ export default {
   props: {
     range: Number,
     imgFolder: String,
+    movieId: Number,
   },
   methods: {
     imagUrlUnit() {
       this.imgUrl = "https://image.tmdb.org/t/p/w342" + this.imgFolder;
+    },
+    cardDetail() {
+      this.$router.push({ name: "details", params: { movieId: this.movieId } });
+      // this.$router.push("details");
     },
   },
   created() {
@@ -40,16 +46,24 @@ export default {
 .card-movie_image {
   position: relative;
   display: flex;
+
+  .card-movie_image_img {
+    border-radius: 2rem;
+    &:hover {
+      box-shadow: 0rem 2rem 5rem rgba($color: #640707, $alpha: 1);
+      border-radius: 5rem;
+    }
+  }
   .movie_range {
     border-radius: 70%;
     position: absolute;
     width: 40px;
     height: 40px;
-    top: 8px;
-    left: 16px;
+    top: 15px;
+    left: 30px;
+
     // background: black;
     .movie_range-detail {
-      box-shadow: 0rem 2rem 5rem rgba($color: #611818, $alpha: 1);
       border-radius: 64%;
       width: 30px;
       padding-top: 4px;
@@ -57,7 +71,6 @@ export default {
       background: yellow;
       color: black;
       font-weight: bold;
-
       height: 30px;
     }
   }

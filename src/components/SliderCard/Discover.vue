@@ -30,7 +30,7 @@ export default {
   },
   methods: {
     movieGetters(keyword) {
-      console.log("selam");
+      this.$router.push("/");
       try {
         if (keyword == "popular") {
           this.isPopuler = "true";
