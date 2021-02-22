@@ -13,7 +13,9 @@ export async function getGenre() {
     const response = await fetch(`${base_url}/genre/movie/list?api_key=${api_key}&language=en-US`);
     return response;
 }
-export async function getMoviDetail(movie_id) {
-    const response = await fetch(`${base_url}/movie/${movie_id}?api_key=${api_key}&language=en-US`);
+export async function getMoviDetail() {
+    const response = await fetch(`${base_url}/movie/581389?api_key=${api_key}&language=en-US`);
     return response;
 }
+//581389
+// ${ movie_id }

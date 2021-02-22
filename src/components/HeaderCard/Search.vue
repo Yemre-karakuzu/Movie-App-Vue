@@ -11,7 +11,7 @@
           @mouseleave="state = 'close'"
           @keyup.enter="searchDatas"
         />
-        <i class="fa fa-search" aria-hidden="true"></i>
+        <i @click="searchDatas" class="fa fa-search" aria-hidden="true"></i>
       </label>
     </form>
   </div>

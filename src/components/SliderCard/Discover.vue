@@ -30,17 +30,15 @@ export default {
   },
   methods: {
     movieGetters(keyword) {
+      console.log("selam");
       try {
         if (keyword == "popular") {
           this.isPopuler = "true";
-          console.log("populer");
           this.$store.dispatch("actionsHeaderTitle", this.popular);
         } else if (keyword == "top_rated") {
-          console.log("toprated");
           this.isToRated = "true";
           this.$store.dispatch("actionsHeaderTitle", this.topRated);
         } else {
-          console.log("upcoming");
           this.isUpComing = "true";
           this.$store.dispatch("actionsHeaderTitle", this.upcoming);
         }
@@ -48,6 +46,7 @@ export default {
           .then((res) => res.json())
           .then((res) => {
             this.data = res.results;
+            console.log("dsdsds", this.data);
             this.$store.dispatch("actionsMovie", this.data);
           });
       } catch (e) {
